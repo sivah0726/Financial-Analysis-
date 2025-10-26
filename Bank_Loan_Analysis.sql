@@ -42,7 +42,7 @@ WHERE MONTH(issue_date) = 11 AND YEAR(issue_date) = 2021
 
 
 --AVerage Intrest Rate
-SELECT AVG(int_rate) * 100 AS Average_Intrest_Rate FROM Bank_loan_financial_data			--ROUND(AVG(int_rate),4) * 100
+SELECT AVG(int_rate) * 100 AS Average_Intrest_Rate FROM Bank_loan_financial_data			
 
 
 SELECT ROUND(AVG(int_rate),4) * 100 AS MTD_Avg_Intrest_Rate FROM Bank_loan_financial_data
@@ -192,4 +192,5 @@ SELECT
 FROM Bank_loan_financial_data
 WHERE grade = 'A' AND address_state = 'CA'           
 GROUP BY home_ownership
+
 ORDER BY COUNT(id) DESC
